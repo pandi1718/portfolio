@@ -12,7 +12,7 @@ import SkillBar from './pages/SkillBar'
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='portfolio'>
     <Navbar />
     <Routes>
       <Route path='/' element={<Home />} />
