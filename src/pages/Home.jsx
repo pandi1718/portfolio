@@ -7,6 +7,13 @@ import blacklinkdin from '../assets/img/blacklinkdin.png'
 import bluelinkdin from '../assets/img/bluelinkdin.png'
 import blackwhat from '../assets/img/blackwhatsapp.png'
 import bluewhat from '../assets/img/bluewhatsapp.png'
+import photo from '../assets/img/profileimage.png'
+import Resume from '../assets/img/Soundhar.png'
+
+
+
+
+
 
 const Home = () => {
 
@@ -156,7 +163,7 @@ const Home = () => {
           style={{textDecoration:'none',color:'#fff'}}
           >
          Download Resume
-          <img src="src/assets/img/Soundhar.png" alt="resume" style={{display:'none'}} />
+          <img src={Resume} alt="resume" style={{display:'none'}} />
           </a>
           </button>
           </div>
@@ -238,7 +245,7 @@ const Home = () => {
       onMouseEnter={()=>setProfile(true)}
       onMouseLeave={()=>setProfile(false)}
       >        
-      <img src="src/assets/img/profileimage.png" alt="profile" 
+      <img src={photo} alt="profile" 
       style={{
         width: "80%",
         height: "110%",
