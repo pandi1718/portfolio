@@ -238,7 +238,7 @@ const Home = () => {
       onMouseEnter={()=>setProfile(true)}
       onMouseLeave={()=>setProfile(false)}
       >        
-      <img src="src/assets/img/profileimage.png" alt="profile" 
+      <img src="public/img/profileimage.png" alt="profile" 
       style={{
         width: "80%",
         height: "110%",
