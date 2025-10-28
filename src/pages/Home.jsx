@@ -9,6 +9,7 @@ import blackwhat from '../assets/img/blackwhatsapp.png'
 import bluewhat from '../assets/img/bluewhatsapp.png'
 import photo from '../assets/img/profileimage.png'
 import Resume from '../assets/img/Soundhar.png'
+import Clap from '../assets/img/clap.png'
 
 
 
@@ -129,7 +130,7 @@ const Home = () => {
     <div style={{display:'flex',alignItems:'center',justifyContent:'center',margin:'auto 0',background:'#ecf8ffff',backgroundSize:'cover',height:'100vh'}}>
     {/* left side  */}
       <div style={{gap:'10px',justifyContent:'start',position:'fixed',left:0,margin:'auto 0px',marginLeft:'50px'}}>
-    <img src="src/assets/img/clap.png" alt="clap" />
+    <img src={Clap} alt="clap" />
     <span>Helo,I'm</span>
 
     <h1 style={{
@@ -158,7 +159,7 @@ const Home = () => {
           {/* Resume  */}
           <div>
         <button style={stylee} onMouseEnter={()=>setHoverr(true)} onMouseLeave={()=>setHoverr(false)}>
-          <a href="src/assets/img/Soundhar.png" 
+          <a href={Resume}
           download="Soundharapandiyan_Resume"
           style={{textDecoration:'none',color:'#fff'}}
           >
