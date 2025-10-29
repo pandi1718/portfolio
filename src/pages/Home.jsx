@@ -132,7 +132,7 @@ const Home = () => {
     {/* left side  */}
       <div style={{gap:'10px',justifyContent:'start',position:'fixed',left:0,margin:'auto 0px',marginLeft:'50px'}}>
     <img className='clap-img' src={Clap} alt="clap" />
-    <span className='sub-tittle'>Helo,I'm</span>
+    <span className='span-sub'>Helo,I'm</span>
 
     <h1 className='home-tittle' style={{
       fontSize:'3rem',
@@ -147,7 +147,7 @@ const Home = () => {
       WebkitTextFillColor:'transparent'
     }}>{changes[start]}</h1>
 
-    <span style={{color:'#626262ff'}}>Fresher Fullstack Developer with hands-on project experience.<br />
+    <span className='para' style={{color:'#626262ff'}}>Fresher Fullstack Developer with hands-on project experience.<br />
         Skilled in building responsive and user-friendly web apps.</span>
       
         <div className='button-container' style={{display:'flex',gap:'20px',marginTop:'30px'}}>
@@ -297,37 +297,67 @@ const Home = () => {
         @keyframes rota { from {transform: rotate(360deg);} to {transform: rotate(0deg);} }
 
       
-        .home-tittle {
-          font-size: 3rem;
-          font-weight: bold;
-          transition: 0.3s ease;
-        }
+
 
         @media (max-width: 480px) {
           .home-container {
             flex-direction: column !important;
             align-items: center !important;
             text-align: center !important;
-            padding: 10px;
           }
 
           .home-tittle {
             font-size: 1rem !important;
+            text-align: center !important;    
+            align-items: center;   
+            justify-content: center; 
+            display: flex ;
+            position : fixed !important;
+            top : 130px !important ;
+            left : 90px !important;
           }
 
           .homee-tittle {
-            font-size: 1rem !important;
+            font-size: 1rem !important;    
+            align-items: center;   
+            justify-content: center; 
+            display: flex ;
+            position : fixed !important;
+            top : 160px !important ;
+            left : 90px !important;
           }
 
-          sub-tittle {
-            font-size: 1.5rem !important;
-            postion: relative !important ;
-            top:-100px !important;
+          .para{
+            font-size: .6rem !important;    
+            align-items: center;   
+            justify-content: center; 
+            display: flex ;
+            text-align: center;
+            position : fixed !important;
+            top : 190px !important ;
+            left : 30px !important;
+          }
+
+          .span-sub{
+            font-size: 1rem !important;    
+            align-items: center;   
+            justify-content: center; 
+            display: flex ;
+            text-align: center;
+            position : fixed !important;
+            top : 95px !important ;
+            left : 150px !important;
           }
 
           .clap-img{
             width: 15% !important;
-            height: auto !important;
+            height: auto !important;    
+            align-items: center;   
+            justify-content: center; 
+            display: flex ;
+            position : fixed !important;
+            top : 80px !important ;
+            left : 90px !important;
           }
         .button-one, .button-two{
         font-size: .5rem !important;    
@@ -341,20 +371,25 @@ const Home = () => {
         .button-container{
           display:flex;
           position: relative ;
-          top: 100px;
+          top: 200px;    
+          align-items: center;   
+          justify-content: center;
         }
         .section-two{
-          position: relative !important;
+          position: fixed !important;
           right: auto !important;
-          top: 75px !important;
-          left: 10px !important ;
-          margin-top: 40px;
-          transform: scale(0.3);
+          top: 310px !important;
+          left: 170px !important ;
+          transform: scale(0.4);    
+          align-items: center;   
+          justify-content: center; 
+          display: flex ;
           }
           .line{
           display: flex;
-          position: relative ;
-          top : 80px ;            
+          position: fixed ;
+          top : 370px !important ;     
+          left : 80px !important ;       
           align-items: center;   
           justify-content: center;  
           }

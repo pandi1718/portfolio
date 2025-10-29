@@ -23,7 +23,7 @@ const App = () => {
       <Route path='/contact' element={<Contact />} />
       <Route path='/skillbar' element={<SkillBar />} />
     </Routes>
-    <Footer />
+    {/* <Footer /> */}
     </BrowserRouter>
   )
 }
