@@ -66,7 +66,7 @@ function BasicExample() {
           z-index: 1000;
         }
 
-        @media (max-width: 320px) {
+        @media (max-width: 400px) {
           .navbar-collapse {
             background: #d1d5db;
             text-align: center;
