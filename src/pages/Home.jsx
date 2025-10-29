@@ -299,7 +299,7 @@ const Home = () => {
       
 
 
-        @media (max-width: 480px) {
+        @media (max-width: 320px) {
           .home-container {
             flex-direction: column !important;
             align-items: center !important;

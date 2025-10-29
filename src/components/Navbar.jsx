@@ -7,16 +7,15 @@ import { Link } from 'react-router-dom';
 function BasicExample() {
   const [hover, setHover] = useState(null);
 
-
   const getStyle = (index) => ({
-    color: hover === index ? '#fff' : '#003ebbff', 
+    color: hover === index ? '#fff' : '#003ebbff',
     textDecoration: 'none',
     cursor: 'pointer',
-    transition: 'color 0.1s linear',
-    border:hover === index ? "none" : "none",
-    padding:hover === index ? "5px" : 'none',
-    background:hover ===index? "#003ebbff" : "none",
-    borderRadius : hover === index ? "5px" : "none"
+    transition: 'all 0.2s ease',
+    padding: '5px 10px',
+    background: hover === index ? '#003ebbff' : 'transparent',
+    borderRadius: '8px',
+    display: 'inline-block',
   });
 
   const links = [
@@ -29,17 +28,26 @@ function BasicExample() {
   ];
 
   return (
-    <Navbar expand="lg" style={{ background: '#d1d5db',position:'fixed',width:'100%'}}>
+    <Navbar expand="lg" className="custom-navbar" fixed="top">
       <Container>
-        <Navbar.Brand href="#home" style={{color:'#003ebbff',fontWeight:'bold'}}>Portfolio</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Brand
+          href="#home"
+          style={{
+            color: '#003ebbff',
+            fontWeight: 'bold',
+            fontSize: '1.3rem',
+          }}
+        >
+          Portfolio
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" style={{ border: 'none' }} />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto d-flex gap-3 text-center">
+          <Nav className="ms-auto d-flex align-items-center text-center gap-3">
             {links.map((link, index) => (
               <Link
                 key={index}
                 to={link.to}
-                style={getStyle(index)} 
+                style={getStyle(index)}
                 onMouseEnter={() => setHover(index)}
                 onMouseLeave={() => setHover(null)}
               >
@@ -49,6 +57,30 @@ function BasicExample() {
           </Nav>
         </Navbar.Collapse>
       </Container>
+
+      <style>{`
+        .custom-navbar {
+          background: #d1d5db;
+          padding: 10px 0;
+          box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+          z-index: 1000;
+        }
+
+        @media (max-width: 320px) {
+          .navbar-collapse {
+            background: #d1d5db;
+            text-align: center;
+            padding: 10px 0;
+          }
+
+          .navbar-nav .nav-link,
+          .navbar-nav a {
+            display: block;
+            margin: 10px 0;
+            font-size: 1rem;
+          }
+        }
+      `}</style>
     </Navbar>
   );
 }
