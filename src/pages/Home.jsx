@@ -46,6 +46,7 @@ const Home = () => {
     border: 'none',
     cursor: 'pointer',
     fontWeight: 'bold',
+    borderRadius: '10px',
     transition: 'all 0.3s ease',
     boxShadow: hover
       ? '0 4px 15px rgba(0, 0, 0, 0.2)'
@@ -127,18 +128,18 @@ const Home = () => {
     const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`
 
   return (
-    <div style={{display:'flex',alignItems:'center',justifyContent:'center',margin:'auto 0',background:'#ecf8ffff',backgroundSize:'cover',height:'100vh'}}>
+    <div className='home-container' style={{display:'flex',alignItems:'center',justifyContent:'center',margin:'auto 0',background:'#ecf8ffff',backgroundSize:'cover',height:'100vh'}}>
     {/* left side  */}
       <div style={{gap:'10px',justifyContent:'start',position:'fixed',left:0,margin:'auto 0px',marginLeft:'50px'}}>
-    <img src={Clap} alt="clap" />
-    <span>Helo,I'm</span>
+    <img className='clap-img' src={Clap} alt="clap" />
+    <span className='sub-tittle'>Helo,I'm</span>
 
-    <h1 style={{
+    <h1 className='home-tittle' style={{
       fontSize:'3rem',
       fontWeight:'bold',
     }}>Soundhara pandiyan</h1>
 
-    <h1 style={{
+    <h1 className='homee-tittle' style={{
       fontSize:'3rem',
       fontWeight:'bold',
       background:'linear-gradient(100deg,#003ebbff,#5600a7ff)',
@@ -149,16 +150,16 @@ const Home = () => {
     <span style={{color:'#626262ff'}}>Fresher Fullstack Developer with hands-on project experience.<br />
         Skilled in building responsive and user-friendly web apps.</span>
       
-        <div style={{display:'flex',gap:'20px',marginTop:'30px'}}>
+        <div className='button-container' style={{display:'flex',gap:'20px',marginTop:'30px'}}>
           <div>
           
-          <button  style={style} onMouseEnter={()=>setHover(true)} onMouseLeave={()=>setHover(false)} >
+          <button className='button-one'   style={style} onMouseEnter={()=>setHover(true)} onMouseLeave={()=>setHover(false)} >
             <a style={{textDecoration:'none',color:'#fff'}} href="#projects">View My Work </a></button>
           
           </div>
           {/* Resume  */}
           <div>
-        <button style={stylee} onMouseEnter={()=>setHoverr(true)} onMouseLeave={()=>setHoverr(false)}>
+        <button className='button-two' style={stylee} onMouseEnter={()=>setHoverr(true)} onMouseLeave={()=>setHoverr(false)}>
           <a href={Resume}
           download="Soundharapandiyan_Resume"
           style={{textDecoration:'none',color:'#fff'}}
@@ -170,9 +171,9 @@ const Home = () => {
           </div>
           </div>
           {/* git  */}
-          <div style={{display:'flex',gap:'20px'}}>
+          <div className='line' style={{display:'flex',gap:'20px'}}>
           <div>
-        <button style={getgitbuttonstyle}>
+        <button className='git-line' style={getgitbuttonstyle}>
           <a href="https://github.com/pandi1718"
           target='_blank' rel="noopener noreferrer"
           onMouseEnter={()=>setGit(true)} 
@@ -183,7 +184,7 @@ const Home = () => {
           </div>
 
           <div>
-        <button style={getemailbuttonstyle}>
+        <button className='email-line' style={getemailbuttonstyle}>
           <a href="https://play.google.com/store/apps/details?id=com.google.android.gm&hl=en-US"
           target='_blank' rel="noopener noreferrer"
           onMouseEnter={()=>setEmail(true)} 
@@ -194,7 +195,7 @@ const Home = () => {
           </div>
 
           <div>
-        <button style={getlinkdinbuttonstyle}>
+        <button className='linkedin-line' style={getlinkdinbuttonstyle}>
           <a href="https://www.linkedin.com/in/soundharapandiyan0/"
           target='_blank' rel="noopener noreferrer"
           onMouseEnter={()=>setLink(true)} 
@@ -205,7 +206,7 @@ const Home = () => {
           </div>
 
           <div>
-        <button style={getwhatbuttonstyle}>
+        <button className='whatsapp-line' style={getwhatbuttonstyle}>
           <a href={whatsappLink}
           target='_blank' rel="noopener noreferrer"
           onMouseEnter={()=>setWhat(true)} 
@@ -218,62 +219,169 @@ const Home = () => {
       </div>
     {/* right side  */}
 
-    <div
+    <div className='section-two'
   style={{
     display: "flex",
     position: "fixed",
-    right: 150,
+    right: 450,
     justifyContent: "center",
     alignItems: "center",
   }}
 >
-    <div style={{
+
+  
+        <div className='first' style={{
+      display:'flex',
+      position:'fixed',
+      width: '400px',
+      height: '400px',
+      borderRadius: '50%',
+      border: '10px solid transparent',
+      animation: 'rota 20s linear infinite',
+      borderBottomColor:'#003ebbff',
+      borderTopColor:'#5600a7ff',
+      borderRightColor:'#5d6980ff',
+      borderLeftColor:'#07d460ff',
+      justifyContent:'center',
+      alignItems:'center',
+    }}> </div>
+
+    <div className='second' style={{
+      display:'flex',
+      position:'fixed',
+      width: '350px',
+      height: '350px',
+      borderRadius: '50%',
+      border: '5px dotted transparent',
+      animation: 'rotate 25s linear infinite',
+      borderBottomColor:'#003ebbff',
+      borderTopColor:'#5600a7ff',
+      borderRightColor:'#5d6980ff',
+      borderLeftColor:'#07d460ff',
+      justifyContent:'center',
+      alignItems:'center'
+    }}></div>
+
+        <div className='third' style={{
       display:'flex',
       position:'fixed',
       width: '260px',
       height: '260px',
       borderRadius: '50%',
-      border: '6px dotted transparent',
-      animation: 'rotate 20s linear infinite',
-      borderBottomColor:'#00bfff',
-      borderTopColor:'#003ebb',
-      borderRightColor:'#5600a7',
-      borderLeftColor:'#5600a7',
+      border: '6px solid transparent',
+      animation: 'rot 30s linear infinite',
+      borderBottomColor:'#003ebbff',
+      borderTopColor:'#5600a7ff',
+      borderRightColor:'#5d6980ff',
+      borderLeftColor:'#07d460ff',
       justifyContent:'center',
-      alignItems:'center'
+      alignItems:'center',      
+      overflow:'hidden'
     }}> </div>
+
       <div style={getprofilebuttonstyle}
       onMouseEnter={()=>setProfile(true)}
       onMouseLeave={()=>setProfile(false)}
       >        
-      <img src={photo} alt="profile" 
+      <img className='naan' src={photo} alt="profile" 
       style={{
         width: "80%",
-        height: "110%",
+        height: "90%",
         borderRadius: "0%",
       }}
       />
       </div>
-<style>
-{`
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-`}
-</style>
-
+      <style>{`
+        @keyframes rotate { from {transform: rotate(0deg);} to {transform: rotate(360deg);} }
+        @keyframes rot { from {transform: rotate(360deg);} to {transform: rotate(0deg);} }
+        @keyframes rota { from {transform: rotate(360deg);} to {transform: rotate(0deg);} }
 
       
+        .home-tittle {
+          font-size: 3rem;
+          font-weight: bold;
+          transition: 0.3s ease;
+        }
+
+        @media (max-width: 480px) {
+          .home-container {
+            flex-direction: column !important;
+            align-items: center !important;
+            text-align: center !important;
+            padding: 10px;
+          }
+
+          .home-tittle {
+            font-size: 1rem !important;
+          }
+
+          .homee-tittle {
+            font-size: 1rem !important;
+          }
+
+          sub-tittle {
+            font-size: 1.5rem !important;
+            postion: relative !important ;
+            top:-100px !important;
+          }
+
+          .clap-img{
+            width: 15% !important;
+            height: auto !important;
+          }
+        .button-one, .button-two{
+        font-size: .5rem !important;    
+        border-radius: 10px ;
+        padding: 10px 15px;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-weight: normal;
+         }
+        .button-container{
+          display:flex;
+          position: relative ;
+          top: 100px;
+        }
+        .section-two{
+          position: relative !important;
+          right: auto !important;
+          top: 75px !important;
+          left: 10px !important ;
+          margin-top: 40px;
+          transform: scale(0.3);
+          }
+          .line{
+          display: flex;
+          position: relative ;
+          top : 80px ;            
+          align-items: center;   
+          justify-content: center;  
+          }
+          .git-line, .email-line, .linkedin-line, .whatsapp-line{
+            width: 30px;
+            height: 30px;
+            display: flex;             
+            align-items: center;   
+            justify-content: center;    
+            border-radius: 50%;
+            background-color: #ecf8ffff;   
+            transition: all 0.3s ease;
+            overflow: hidden;
+            padding: 0;    
+          }
+          .git-line img,.email-line img,.linkedin-line img,.whatsapp-line img {
+            width: 150%;  
+            height: 150%;   
+            position: relative ;
+            top : -8px ;   
+            left: -4px;  
+          }
+      `}</style>
+
+
+
     </div>
-    
-
-
     </div>
   )
 }
