@@ -10,11 +10,7 @@ import bluewhat from '../assets/img/bluewhatsapp.png'
 import photo from '../assets/img/profileimage.png'
 import Resume from '../assets/img/Soundhar.png'
 import Clap from '../assets/img/clap.png'
-
-
-
-
-
+import { Link } from 'react-router-dom';
 
 const Home = () => {
 
@@ -113,24 +109,38 @@ const Home = () => {
     transform: what ? 'scale(1.2)' : 'scale(1)',
   }
   const getprofilebuttonstyle ={    
-      borderRadius:'50%',
-      boxShadow: profile ?  "2px 2px 15px blue" : "2px 2px 10px grey" ,
-      height: profile ? '250px' : "250px",      
-      overflow:'hidden',
-      position:'absolute',
-      width:'250px',
-      display:'flex',
-      alignItems:'center',
-      justifyContent:'center',
+  borderRadius: '50%',
+  boxShadow: profile ? "2px 2px 15px blue" : "2px 2px 10px grey",
+  height: "250px",
+  width: "250px",
+  overflow: 'hidden',
+  position: 'fixed',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  zIndex: 10,
+  animation: 'none',
+    
   }
     const whatsappNumber = '+919952593657'
     const message = 'Hello Chandru! I saw your portfolio.'
     const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`
 
   return (
-    <div className='home-container' style={{display:'flex',alignItems:'center',justifyContent:'center',margin:'auto 0',background:'#ecf8ffff',backgroundSize:'cover',height:'100vh'}}>
-    {/* left side  */}
-      <div style={{gap:'10px',justifyContent:'start',position:'fixed',left:0,margin:'auto 0px',marginLeft:'50px'}}>
+    <div
+      className="home-container"
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-around",
+        flexWrap: "wrap",
+        minHeight: "100vh",
+        background: "#ecf8ffff",
+        padding: "50px 20px",
+        width:'100%'
+      }}
+    >       {/* left side  */}
+      <div style={{ maxWidth: "500px", textAlign: "center",position:'relative',left:0,top:100,gap:10, }}> 
     <img className='clap-img' src={Clap} alt="clap" />
     <span className='span-sub'>Helo,I'm</span>
 
@@ -151,12 +161,12 @@ const Home = () => {
         Skilled in building responsive and user-friendly web apps.</span>
       
         <div className='button-container' style={{display:'flex',gap:'20px',marginTop:'30px'}}>
-          <div>
           
+          <div>          
           <button className='button-one'   style={style} onMouseEnter={()=>setHover(true)} onMouseLeave={()=>setHover(false)} >
-            <a style={{textDecoration:'none',color:'#fff'}} href="#projects">View My Work </a></button>
-          
+            <Link to="/projects" style={{textDecoration:'none',color:'#fff'}}>View My Work </Link></button>
           </div>
+
           {/* Resume  */}
           <div>
         <button className='button-two' style={stylee} onMouseEnter={()=>setHoverr(true)} onMouseLeave={()=>setHoverr(false)}>
@@ -218,88 +228,113 @@ const Home = () => {
           </div>
       </div>
     {/* right side  */}
-
-    <div className='section-two'
+<div
+  className='section-two'
   style={{
     display: "flex",
-    position: "fixed",
-    right: 450,
     justifyContent: "center",
     alignItems: "center",
+    position: "relative",
+    right: 0,
+    top: 80,
   }}
 >
-
-  
-        <div className='first' style={{
-      display:'flex',
-      position:'fixed',
-      width: '400px',
-      height: '400px',
-      borderRadius: '50%',
-      border: '10px solid transparent',
-      animation: 'rota 20s linear infinite',
-      borderBottomColor:'#003ebbff',
-      borderTopColor:'#5600a7ff',
-      borderRightColor:'#5d6980ff',
-      borderLeftColor:'#07d460ff',
-      justifyContent:'center',
-      alignItems:'center',
-    }}> </div>
-
-    <div className='second' style={{
-      display:'flex',
-      position:'fixed',
-      width: '350px',
-      height: '350px',
-      borderRadius: '50%',
-      border: '5px dotted transparent',
-      animation: 'rotate 25s linear infinite',
-      borderBottomColor:'#003ebbff',
-      borderTopColor:'#5600a7ff',
-      borderRightColor:'#5d6980ff',
-      borderLeftColor:'#07d460ff',
-      justifyContent:'center',
-      alignItems:'center'
-    }}></div>
-
-        <div className='third' style={{
-      display:'flex',
-      position:'fixed',
-      width: '260px',
-      height: '260px',
-      borderRadius: '50%',
-      border: '6px solid transparent',
-      animation: 'rot 30s linear infinite',
-      borderBottomColor:'#003ebbff',
-      borderTopColor:'#5600a7ff',
-      borderRightColor:'#5d6980ff',
-      borderLeftColor:'#07d460ff',
-      justifyContent:'center',
-      alignItems:'center',      
-      overflow:'hidden'
-    }}> </div>
-
-      <div style={getprofilebuttonstyle}
-      onMouseEnter={()=>setProfile(true)}
-      onMouseLeave={()=>setProfile(false)}
-      >        
-      <img className='naan' src={photo} alt="profile" 
+  <div
+    className='circle-wrapper'
+    style={{
+      position: "relative",
+      width: "400px",
+      height: "400px",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+    }}
+  >
+    {/* Circle 1 */}
+    <div
       style={{
-        width: "80%",
-        height: "90%",
-        borderRadius: "0%",
+        position: "absolute",
+        width: "400px",
+        height: "400px",
+        borderRadius: "50%",
+        border: "10px solid transparent",
+        borderTopColor: "#5600a7",
+        borderBottomColor: "#003ebb",
+        borderRightColor: "#07d460",
+        borderLeftColor: "#5d6980",
+        animation: "rotate 25s linear infinite",
       }}
+    ></div>
+
+    {/* Circle 2 */}
+    <div
+      style={{
+        position: "absolute",
+        width: "500px",
+        height: "500px",
+        borderRadius: "50%",
+        border: "10px solid transparent",
+        borderTopColor: "#003ebb",
+        borderBottomColor: "#5600a7",
+        borderRightColor: "#07d460",
+        borderLeftColor: "#5d6980",
+        animation: "rotateReverse 30s linear infinite",
+      }}
+    ></div>
+
+    {/* Circle 3 (dotted) */}
+    <div
+      style={{
+        position: "absolute",
+        width: "320px",
+        height: "320px",
+        borderRadius: "50%",
+        border: "5px dotted #07d460",
+        animation: "rotatemin 35s linear infinite",
+      }}
+    ></div>
+
+    {/* Profile Image ( */}
+    <div
+      style={{
+        ...getprofilebuttonstyle,
+        position: "absolute",
+        animation: "none",
+      }}
+      onMouseEnter={() => setProfile(true)}
+      onMouseLeave={() => setProfile(false)}
+    >
+      <img
+        src={photo}
+        alt="profile"
+        style={{
+          width: "85%",
+          height: "100%",
+          borderRadius: "50%",
+          objectFit: "cover",
+          animation: "none",
+          position:'relative',
+          top:'25px'
+        }}
       />
-      </div>
-      <style>{`
-        @keyframes rotate { from {transform: rotate(0deg);} to {transform: rotate(360deg);} }
-        @keyframes rot { from {transform: rotate(360deg);} to {transform: rotate(0deg);} }
-        @keyframes rota { from {transform: rotate(360deg);} to {transform: rotate(0deg);} }
+    </div>
+  </div>
 
-      
-
-
-        @media (max-width: 400px){
+  {/* Keyframes */}
+  <style>{`
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    @keyframes rotateReverse {
+      from { transform: rotate(360deg); }
+      to { transform: rotate(0deg); }
+    }
+    @keyframes rotatemin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+        @media (max-width: 425px){
           .home-container {
             flex-direction: column !important;
             align-items: center !important;
@@ -312,7 +347,7 @@ const Home = () => {
             align-items: center;   
             justify-content: center; 
             display: flex ;
-            position : fixed !important;
+            position : relative !important;
             top : 130px !important ;
             left : 90px !important;
           }
@@ -322,7 +357,7 @@ const Home = () => {
             align-items: center;   
             justify-content: center; 
             display: flex ;
-            position : fixed !important;
+            position : relative !important;
             top : 160px !important ;
             left : 90px !important;
           }
@@ -333,7 +368,7 @@ const Home = () => {
             justify-content: center; 
             display: flex ;
             text-align: center;
-            position : fixed !important;
+            position : relative !important;
             top : 190px !important ;
             left : 30px !important;
           }
@@ -344,7 +379,7 @@ const Home = () => {
             justify-content: center; 
             display: flex ;
             text-align: center;
-            position : fixed !important;
+            position : relative !important;
             top : 95px !important ;
             left : 150px !important;
           }
@@ -355,7 +390,7 @@ const Home = () => {
             align-items: center;   
             justify-content: center; 
             display: flex ;
-            position : fixed !important;
+            position : relative !important;
             top : 80px !important ;
             left : 90px !important;
           }
@@ -376,7 +411,7 @@ const Home = () => {
           justify-content: center;
         }
         .section-two{
-          position: fixed !important;
+          position: relative !important;
           right: auto !important;
           top: 310px !important;
           left: 170px !important ;
@@ -387,7 +422,7 @@ const Home = () => {
           }
           .line{
           display: flex;
-          position: fixed ;
+          position: relative ;
           top : 370px !important ;     
           left : 80px !important ;       
           align-items: center;   

@@ -1,4 +1,11 @@
 import React, { useState } from 'react'
+import call from '../assets/img/call.png'
+import email from '../assets/img/email.png'
+import git from '../assets/img/github.png'
+import insta from '../assets/img/instragram.png'
+import link from '../assets/img/linkdin.png'
+import loca from '../assets/img/location.png'
+import { Link } from 'react-router-dom'
 
 const Contact = () => {
   
@@ -195,7 +202,7 @@ const Contact = () => {
       }}
     >
       <img
-        src="src/assets/contact/email.png"
+        src={email}
         alt="mail"
         style={{ width: '24px', height: '24px' }}
       />
@@ -234,8 +241,8 @@ const Contact = () => {
       }}
     >
       <img
-        src="src/assets/contact/call.png"
-        alt="mail"
+        src={call}
+        alt="call"
         style={{ width: '24px', height: '24px' }}
       />
     </div>
@@ -273,8 +280,8 @@ const Contact = () => {
       }}
     >
       <img
-        src="src/assets/contact/location.png"
-        alt="mail"
+        src={loca}
+        alt="location"
         style={{ width: '24px', height: '24px' }}
       />
     </div>
@@ -305,7 +312,7 @@ const Contact = () => {
    Connect with me on social platforms
   </p>
 
-  {/* Email Row */}
+  {/* github Row */}
   <div
     style={{
       display: 'flex',
@@ -320,6 +327,12 @@ const Contact = () => {
     onMouseOver={(e) => (e.currentTarget.style.transform = 'scale(1.02)')}
     onMouseOut={(e) => (e.currentTarget.style.transform = 'scale(1)')}
   >
+        <a 
+  href="https://github.com/pandi1718" 
+  target="_blank" 
+  rel="noopener noreferrer"
+  style={{ textDecoration: 'none', color: 'inherit',display:'flex'}}
+>
     <div
       style={{
         background: 'linear-gradient(100deg,#003ebbff,#5600a7ff)',
@@ -333,18 +346,19 @@ const Contact = () => {
       }}
     >
       <img
-        src="src/assets/contact/github.png"
-        alt="mail"
+        src={git}
+        alt="github"
         style={{ width: '24px', height: '24px' }}
       />
     </div>
 
-    <div>
+    <div style={{marginLeft:'20px'}}>
       <p style={{ margin: 0, fontSize: '0.9rem', color: '#555' }}>Github</p>
       <p style={{ margin: 0, fontSize: '0.85rem', color: '#000000ff',fontWeight: '600', }}>https://github.com/pandi1718</p>
     </div>
+    </a>
   </div>
-  {/* Call row  */}
+  {/* linkedin row  */}
   <div
     style={{
       display: 'flex',
@@ -359,6 +373,13 @@ const Contact = () => {
     onMouseOver={(e) => (e.currentTarget.style.transform = 'scale(1.02)')}
     onMouseOut={(e) => (e.currentTarget.style.transform = 'scale(1)')}
   >
+    
+    <a 
+  href="https://www.linkedin.com/in/soundharapandiyan0/" 
+  target="_blank" 
+  rel="noopener noreferrer"
+  style={{ textDecoration: 'none', color: 'inherit',display:'flex'}}
+>
     <div
       style={{
         background: 'linear-gradient(100deg,#003ebbff,#5600a7ff)',
@@ -372,18 +393,19 @@ const Contact = () => {
       }}
     >
       <img
-        src="src/assets/contact/linkdin.png"
-        alt="mail"
+        src={link}
+        alt="linkedin"
         style={{ width: '24px', height: '24px' }}
       />
     </div>
 
-    <div>
+    <div style={{marginLeft:'20px'}}>
       <p style={{ margin: 0, fontSize: '0.9rem', color: '#555' }}>Phone</p>
       <p style={{ margin: 0, fontSize: '0.85rem', color: '#000000ff',fontWeight: '600', }}>linkedin.com/in/soundharapandiyan0/</p>
     </div>
+    </a>
   </div>
-  {/* location row  */}
+  {/* insta row  */}
   <div
     style={{
       display: 'flex',
@@ -398,6 +420,13 @@ const Contact = () => {
     onMouseOver={(e) => (e.currentTarget.style.transform = 'scale(1.02)')}
     onMouseOut={(e) => (e.currentTarget.style.transform = 'scale(1)')}
   >
+
+    <a 
+  href="https://www.instagram.com/pandiyar_ravusu/" 
+  target="_blank" 
+  rel="noopener noreferrer"
+  style={{ textDecoration: 'none', color: 'inherit',display:'flex'}}
+>
     <div
       style={{
         background: 'linear-gradient(100deg,#003ebbff,#5600a7ff)',
@@ -410,17 +439,19 @@ const Contact = () => {
         height: '40px',
       }}
     >
-      <img
-        src="src/assets/contact/instragram.png"
-        alt="mail"
+            <img
+        src={insta}
+        alt="instragram"
         style={{ width: '24px', height: '24px' }}
       />
     </div>
 
-    <div>
+    <div style={{marginLeft:'20px'}}>
       <p style={{ margin: 0, fontSize: '0.9rem',  color: '#555' }}>Insta I'd</p>
       <p style={{ margin: 0, fontSize: '0.85rem', color: '#000000ff',fontWeight: '600',}}>pandiyar_ravusu</p>
+
     </div>
+    </a>
   </div>
 </div>
 

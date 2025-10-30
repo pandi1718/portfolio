@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
+import browser from '../assets/img/browser.png'
 
 const About = () => {
   const [hover, setHover] = useState(false);
   const [like, setLike] = useState(false);
 
   const box = [
-    { name: 'Frontend Expert', sub: 'React, Next.js, SQL, and modern CSS frameworks', img: 'src/assets/img/white globle.png' },
-    { name: 'Backend Mastery', sub: 'Node.js, Python, database, and API architecture', img: 'src/assets/img/white globle.png' },
-    { name: 'Frontend Expert', sub: 'React, Next.js, SQL, and modern CSS frameworks', img: 'src/assets/img/white globle.png' },
-    { name: 'Backend Mastery', sub: 'Node.js, Python, database, and API architecture', img: 'src/assets/img/white globle.png' }
+    { name: 'Frontend Expert', sub: 'React, Next.js, SQL, and modern CSS frameworks',  },
+    { name: 'Backend Mastery', sub: 'Node.js, Python, database, and API architecture',},
+    { name: 'Frontend Expert', sub: 'React, Next.js, SQL, and modern CSS frameworks', },
+    { name: 'Backend Mastery', sub: 'Node.js, Python, database, and API architecture', }
   ];
 
   const style = {
@@ -110,7 +111,7 @@ const About = () => {
               }}
             >
               <div style={style}>
-                <img style={{ width: '60%', height: '60%' }} src={boxe.img} alt="browser" />
+                <img style={{ width: '60%', height: '60%' }} src={browser} alt="browser" />
               </div>
               <div>
                 <h2 style={{ fontSize: '1rem', margin: 0 }}>{boxe.name}</h2>

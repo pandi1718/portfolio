@@ -1,4 +1,7 @@
 import React, { useState } from 'react'
+import edu from '../assets/img/edu.png'
+import map from '../assets/img/map.png'
+import calender from '../assets/img/calender.png'
 
 const Experience = () => {
     const [hover, setHover] = useState(false)
@@ -48,11 +51,13 @@ const Experience = () => {
               <p style={{color:'#003ebbff',fontWeight:'bold'}}>Fortune Innovatives</p>
           
           <div style={{display:'flex',gap:'20px'}}>
-              <p style={{fontSize:'.8rem'}}>
-                 <img src="src/assets/img/map.png" alt="location" />Salem, Tamil Nadu</p>
+              <a style={{fontSize:'.8rem',textDecoration:'none',color:'#000'}}
+              target='_blank' rel='noopener noreferer' href='https://www.google.com/maps/dir//2nd+Floor,+Fortune+innovatives_salem,+Navanidhi+Towers,+AVR+Roundana,+Junction+Main+Rd,+State+Bank+Colony,+Salem,+Tamil+Nadu+636005/@11.6761608,78.1251665,17z/data=!4m16!1m7!3m6!1s0x3babf115c7ad3957:0xee89d38e8d3831b0!2sFortune+innovatives_salem!8m2!3d11.6761608!4d78.1277414!16s%2Fg%2F11w1dsrnwj!4m7!1m0!1m5!1m1!1s0x3babf115c7ad3957:0xee89d38e8d3831b0!2m2!1d78.1277414!2d11.6761608?entry=ttu&g_ep=EgoyMDI1MTAyNy4wIKXMDSoASAFQAw%3D%3D'
+              >
+                 <img src={map} alt="location" />Salem, Tamil Nadu</a>
              
             <div style={{gap:'5px',display:'flex'}}>
-               <img src="src/assets/img/calender.png" alt="location"
+               <img src={calender} alt="calender"
               style={{width:'20px',height:'20px'}}
               /> <p style={{fontSize:'.8rem'}}>Jan 2024 – Jun 2025</p>
             </div>
@@ -79,17 +84,17 @@ const Experience = () => {
           
   
             <div style={{gap:'5px',display:'flex'}}>
-               <img src="src/assets/img/edu.png" alt="location"
+               <img src={edu} alt="education"
               style={{width:'20px',height:'20px'}}
               /> <p style={{fontSize:'.8rem'}}>Paavai College Of Engineering - Anna University</p>
             </div>
             
           <div style={{display:'flex',gap:'20px'}}>
-              <p style={{fontSize:'.8rem'}}>
-                 <img src="src/assets/img/map.png" alt="location" />Namakkal, Tamil Nadu</p>
+              <a target='_blank' rel='noopener noreferrer' href='https://www.google.com/maps/dir//Pavai+College+Of+Technology,+NH-44,+Service+Rd,+Namakkal,+Tamil+Nadu+637018/@11.400784,78.1363483,14z/data=!4m17!1m8!3m7!1s0x3babc3a17494d5d7:0xe75435f30b4949b9!2sPavai+College+Of+Technology!8m2!3d11.400784!4d78.1605876!15sChdwYWF2YWkgY29sbGVnZSBuYW1ha2thbJIBB2NvbGxlZ2XgAQA!16s%2Fm%2F0gg6fm7!4m7!1m0!1m5!1m1!1s0x3babc3a17494d5d7:0xe75435f30b4949b9!2m2!1d78.1605876!2d11.400784?entry=ttu&g_ep=EgoyMDI1MTAyNy4wIKXMDSoASAFQAw%3D%3D'style={{fontSize:'.8rem',cursor:'pointer',textDecoration:'none',color:'#000'}}>
+                 <img src={map} alt="map" />Namakkal, Tamil Nadu</a>
              
             <div style={{gap:'5px',display:'flex'}}>
-               <img src="src/assets/img/calender.png" alt="location"
+               <img src={calender} alt="calender"
               style={{width:'20px',height:'20px'}}
               /> <p style={{fontSize:'.8rem'}}>2022 – 2024</p>
             </div>
@@ -102,17 +107,19 @@ const Experience = () => {
            <p style={{color:'#003ebbff',fontWeight:'bold'}}>Bachelor of Business Administration (Business & Marketing)</p>
 
             <div style={{gap:'5px',display:'flex'}}>
-               <img src="src/assets/img/edu.png" alt="location"
+               <img src={edu} alt="degree"
               style={{width:'20px',height:'20px'}}
               /> <p style={{fontSize:'.8rem'}}>Arignar Anna Govt. Arts College - Periyar University</p>
             </div>
             
           <div style={{display:'flex',gap:'20px'}}>
-              <p style={{fontSize:'.8rem'}}>
-                 <img src="src/assets/img/map.png" alt="location" />Namakkal, Tamil Nadu</p>
+              <a style={{fontSize:'.8rem',textDecoration:'none',color:'#000'}}
+              target='_blank' rel='noopener noreferer' href='https://www.google.com/maps/place/Arignar+Anna+Government+Arts+College/@11.1731006,78.1634877,17z/data=!3m1!4b1!4m6!3m5!1s0x3babcc4845acdd6d:0xb8b96e7968f9cad4!8m2!3d11.1731006!4d78.1660626!16s%2Fg%2F1tfk7g10?entry=ttu&g_ep=EgoyMDI1MTAyNy4wIKXMDSoASAFQAw%3D%3D'
+              >
+                 <img src={map} alt="location" />Namakkal, Tamil Nadu</a>
              
             <div style={{gap:'5px',display:'flex'}}>
-               <img src="src/assets/img/calender.png" alt="location"
+               <img src={calender} alt="calender"
               style={{width:'20px',height:'20px'}}
               /> <p style={{fontSize:'.8rem'}}>2019 – 2022</p>
             </div>

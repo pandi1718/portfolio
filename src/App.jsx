@@ -9,13 +9,15 @@ import Projects from './pages/Projects'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
 import SkillBar from './pages/SkillBar'
+import Portfolio from './pages/Portfolio'
 
 const App = () => {
   return (
     <BrowserRouter basename='/portfolio'>
     <Navbar />
     <Routes>
-      <Route path='/' element={<Home />} />
+      <Route path='/' element={<Portfolio />} />
+      <Route path='/home' element={<Home />} />
       <Route path='/about' element={<About />} />
       <Route path='/skill' element={<Skill />} />
       <Route path='/projects' element={<Projects />} />
